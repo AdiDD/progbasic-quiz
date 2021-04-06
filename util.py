@@ -11,8 +11,8 @@ def is_correct(answer, question):
 
 def convert_time(time_passed, time_limit):
     if time_limit > 60:
-        mm = time_limit - time_passed // 60
-        ss = time_limit - time_passed % 60
+        mm = int(time_limit - time_passed) // 60
+        ss = int(time_limit - time_passed) % 60
     else:
         mm = 0
         ss = time_limit - time_passed % 60
