@@ -12,11 +12,12 @@ def print_question(question):
     print(question[4])
 
 
-def print_stats(questions_answered, mistakes, limit=0):
+def print_stats(questions_answered, mistakes, time_left, limit=0):
+    mm, ss = time_left
     if limit == 0:
-        print(f"Questions answered: {questions_answered}, Mistakes: {mistakes}")
+        print(f"Questions answered: {questions_answered}, Mistakes: {mistakes}, Time left: {ss} seconds")
     else:
-        print(f"Questions answered: {questions_answered}/{limit}, Mistakes: {mistakes}")
+        print(f"Questions answered: {questions_answered}/{limit}, Mistakes: {mistakes}, Time left: {mm} minutes and {ss} seconds")
     print("\n--------------------------------------------------\n")
 
 

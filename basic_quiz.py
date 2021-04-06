@@ -16,7 +16,8 @@ def basic_quiz():
         question = random.choice(questions)
         questions.remove(question)
         util.clear_terminal()
-        view.print_stats(questions_answered_correctly, mistakes, 2)
+        time_left = util.convert_time(time.time() - START_TIME, 20 * 60)
+        view.print_stats(questions_answered_correctly, mistakes, time_left, 25)
         view.print_question(question)
         answer = view.get_answer("Please select your answer: ").upper()
         while answer not in ["A", "B", "C", "D"]:
