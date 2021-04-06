@@ -7,17 +7,17 @@ import view
 from questions import questions
 
 
-def one_min_quiz():
+def custom_quiz(minutes):
     mistakes = 0
     questions_answered_correctly = 0
-    TIME_LIMIT = 1 * 60  # 1 minute
+    TIME_LIMIT = minutes * 60
     START_TIME = time.time()
     try:
         while time.time() - START_TIME < TIME_LIMIT:
             question = random.choice(questions)
             questions.remove(question)
             util.clear_terminal()
-            time_left = util.convert_time(time.time() - START_TIME, 1 * 60)
+            time_left = util.convert_time(time.time() - START_TIME, minutes * 60)
             view.print_stats(questions_answered_correctly, mistakes, time_left, 0)
             view.print_question(question)
             answer = view.get_answer("Please select your answer: ").upper()
@@ -32,7 +32,10 @@ def one_min_quiz():
                 break
     except IndexError:
         util.clear_terminal()
-        sys.exit(f"You managed to answer {questions_answered_correctly} questions correctly in {60 - time_left[1]} seconds!")
+        sys.exit(f"You managed to answer {questions_answered_correctly} questions correctly!")
+    except KeyboardInterrupt:
+        util.clear_terminal()
+        sys.exit("Program closed")
 
     util.clear_terminal()
     view.print_finish_screen(questions_answered_correctly, mistakes)
