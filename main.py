@@ -22,5 +22,6 @@ def main():
         clear_terminal()
         sys.exit("Program closed")
 
+
 if __name__ == "__main__":
     main()
