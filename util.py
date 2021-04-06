@@ -17,3 +17,7 @@ def convert_time(time_passed, time_limit):
         mm = 0
         ss = time_limit - time_passed % 60
     return int(mm), int(ss)
+
+
+def is_in_time_limit(time_passed, time_limit):
+    return time_passed < time_limit
