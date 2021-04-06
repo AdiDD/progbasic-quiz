@@ -22,7 +22,7 @@ def one_min_quiz():
         while answer not in ["A", "B", "C", "D"]:
             answer = view.get_answer("Pleas enter A, B, C or D: ").upper()
 
-        if answer == question[-1] and time.time() - START_TIME < TIME_LIMIT:
+        if util.is_correct(answer, question) and time.time() - START_TIME < TIME_LIMIT:
             questions_answered_correctly += 1
         elif time.time() - START_TIME < TIME_LIMIT:
             mistakes += 1
