@@ -21,9 +21,14 @@ def print_stats(questions_answered, mistakes, limit=0):
 
 
 def print_finish_screen(questions_answered, mistakes, passed=True, limit=0):
-    if passed:
-        print("You passed")
-        print(f"Questions answered: {questions_answered}/, Mistakes: {mistakes}")
+    if passed and limit > 0:
+        print("You passed!")
+        print(f"Questions answered: {questions_answered}/{limit}, Mistakes: {mistakes}")
+    elif not passed and limit > 0:
+        print("You failed!")
+        print(f"Questions answered: {questions_answered}/{limit}, Mistakes: {mistakes}")
+    else:
+        print(f"You managed to answer correctly {questions_answered} questions in one minute.")
 
 
 def get_answer(text):
