@@ -1,7 +1,7 @@
 def start_screen():
     print("Welcome to the progbasiz quiz!")
     print("If you want to take a basic quiz (25 questions in 25 minutes), press 1")
-    print("If you want to test how many questions you can answer in 1 minute, press 2")
+    print("If you want to set your own time limit with unlimited questions, press 2")
 
 
 def print_question(question):
@@ -15,9 +15,9 @@ def print_question(question):
 def print_stats(questions_answered, mistakes, time_left, limit=0):
     mm, ss = time_left
     if limit == 0:
-        print(f"Questions answered: {questions_answered}, Mistakes: {mistakes}, Time left: {ss} seconds")
+        print(f"Questions answered correctly: {questions_answered}, Mistakes: {mistakes}, Time left: {mm} minutes and {ss} seconds")
     else:
-        print(f"Questions answered: {questions_answered}/{limit}, Mistakes: {mistakes}, Time left: {mm} minutes and {ss} seconds")
+        print(f"Questions answered correctly: {questions_answered}/{limit}, Mistakes: {mistakes}, Time left: {mm} minutes and {ss} seconds")
     print("\n--------------------------------------------------\n")
 
 
