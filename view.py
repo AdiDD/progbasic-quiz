@@ -2,6 +2,7 @@ def start_screen():
     print("Welcome to the progbasiz quiz!")
     print("If you want to take a basic quiz (25 questions in 25 minutes), press 1")
     print("If you want to set your own time limit with unlimited questions, press 2")
+    print("If you want to go through all the questions at your own pace, press 3")
 
 
 def print_question(question):
@@ -22,14 +23,16 @@ def print_stats(questions_answered, mistakes, time_left, limit=0):
 
 
 def print_finish_screen(questions_answered_correctly, passed=True, limit=0):
-    if passed and limit > 0:
+    if passed and limit == 25 :
         print("Congratulations, you passed!")
         print(f"You answered {questions_answered_correctly} questions correctly out of {limit}.")
-    elif not passed and limit > 0:
+    elif not passed and limit == 25:
         print("You failed!")
         print(f"You answered {questions_answered_correctly} questions correctly out of {limit}.")
-    else:
+    elif limit == 1:
         print(f"You managed to answer {questions_answered_correctly} questions correctly in one minute.")
+    else:
+        print(f"You managed to answer {questions_answered_correctly} questions correctly in {limit} minutes.")
 
 
 def get_answer(text):

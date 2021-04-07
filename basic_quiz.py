@@ -20,7 +20,7 @@ def basic_quiz():
             time_left = convert_time(time.time() - START_TIME, 20 * 60)
             view.print_stats(questions_answered_correctly, mistakes, time_left, 25)
             view.print_question(question)
-            answer = view.get_answer("Please select your answer: ").upper()
+            answer = view.get_answer("\nPlease select your answer: ").upper()
             while answer not in ["A", "B", "C", "D"]:
                 answer = view.get_answer("Pleas enter A, B, C or D: ").upper()
 

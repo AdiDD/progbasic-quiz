@@ -32,10 +32,10 @@ def custom_quiz(minutes):
                 break
     except IndexError:
         clear_terminal()
-        sys.exit(f"You managed to answer {questions_answered_correctly} questions correctly!")
+        sys.exit(f"You managed to answer {questions_answered_correctly} questions correctly in under {minutes} minutes!")
     except KeyboardInterrupt:
         clear_terminal()
         sys.exit("Program closed")
 
     clear_terminal()
-    view.print_finish_screen(questions_answered_correctly, mistakes)
+    view.print_finish_screen(questions_answered_correctly, True, minutes)

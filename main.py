@@ -3,16 +3,19 @@ from util import clear_terminal
 from view import start_screen, get_answer
 from custom_quiz import custom_quiz
 from basic_quiz import basic_quiz
+from all_questions import all_questions
 
 
 def main():
     try:
         start_screen()
         answer = get_answer("Make your choice: ")
-        while answer not in ["1", "2"]:
-            answer = get_answer("Pleas enter 1 or 2: ")
+        while answer not in ["1", "2", "3"]:
+            answer = get_answer("Pleas enter 1, 2 or 3: ")
         if answer == "1":
             basic_quiz()
+        elif answer == "3":
+            all_questions()
         else:
             minutes = get_answer("How many minutes would you like? (max 5) ")
             while minutes not in ["1", "2", "3", "4", "5"]:
