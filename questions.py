@@ -50,7 +50,7 @@ questions = [
             [
                 "What does it mean that an object is immutable in Python?",
                 "\nA. It means that you can not call any methods on that object",
-                "\nB. Means that the object's state can not be altered after it's been create\nd.",
+                "\nB. Means that the object's state can not be altered after it's been created.",
                 "\nC. It means that the object is not iterable",
                 "\nD. It means that the object is a string",
                 "B"
@@ -106,8 +106,8 @@ questions = [
             [
                 "Given the dictionary d = {'a': 100, 'b': 200, 'c': 300}, what method call will delete the entry whose value is 200?",
                 "\nA. del d['b']",
-                "\nB. \nd.pop('b')",
-                "\nC. \nd.popitem()",
+                "\nB. d.pop('b')",
+                "\nC. d.popitem()",
                 "\nD. All of the above",
                 "B"
             ],
@@ -129,9 +129,9 @@ questions = [
             ],
             [
                 "Which one of the following if statements will NOT execute successfully?\n",
-                "\nA. if(1,2): \n\tprint('True')\n",
-                "\nB. if(1,2): print('True')\n",
-                "\nC. if(1,2):\n\t\t print('True')\n",
+                "\nA. if(1,2): \n\tprint('True')",
+                "\nB. if(1,2): print('True')",
+                "\nC. if(1,2):\n\t\t print('True')",
                 "\nD. All of the above will execute successfully",
                 "D"
             ],
@@ -239,7 +239,7 @@ questions = [
                 "\nA. 0",
                 "\nB. False",
                 "\nC. 'None'",
-                "\nD. []",
+                "\nD. None of the above",
                 "C"
             ],
             [
