@@ -81,9 +81,9 @@ questions = [
             ],
             [
                 "Given the dictionary d = {'a' : 100, 'b': 200, 'c': 300}, which of the following will remove the entry in the dictionary for key 'c'?",
-                "\nA. \nd.popitem(2)",
+                "\nA. d.popitem(2)",
                 "\nB. del d['c']",
-                "\nC. \nd.remove('c')",
+                "\nC. d.remove('c')",
                 "\nD. All of the above wil remove the entry 'baz' from the dictionary",
                 "B"
             ],
