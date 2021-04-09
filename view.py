@@ -67,4 +67,4 @@ def print_finish_screen(questions_answered_correctly, passed=True, limit=0):
 
 
 def get_answer(text):
-    return input(text)
+    return input(f'\n{text}')
