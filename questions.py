@@ -104,12 +104,12 @@ questions = [
                 "D"
             ],
             [
-                "Given the dictionary d = {'a': 100, 'b': 200, 'c': 300}, what method call will delete the entry whose value is 200?",
-                "\nA. del d['b']",
-                "\nB. d.pop('b')",
+                "Given the dictionary d = {'a': 100, 'b': 200, 'c': 300}, what method call will delete the entry whose value is 300?",
+                "\nA. del d['c']",
+                "\nB. d.remove('c')",
                 "\nC. d.popitem()",
                 "\nD. All of the above",
-                "B"
+                "C"
             ],
             [
                 "Suppose you have a dictionary d1. Which of the following does NOT creates a variable d2 which contains a copy of d1:",
