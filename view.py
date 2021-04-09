@@ -31,6 +31,7 @@ def print_color(string, color="w", linked=0, style="reset"):
 
 def start_screen():
     print_color("Welcome to the progbasiz quiz!", 'random')
+    print_color("\n--------------------------------------------------\n", 'random')
     print_color("If you want to take a basic quiz (25 questions in 25 minutes), press 1", 'random')
     print_color("If you want to set your own time limit with unlimited questions, press 2", 'random')
     print_color("If you want to go through all the questions at your own pace, press 3", 'random')
@@ -38,6 +39,7 @@ def start_screen():
 
 def print_question(question):
     print_color(question[0], 'random')
+    print_color("\n--------------------------------------------------\n", 'random')
     print_color(question[1], 'random')
     print_color(question[2], 'random')
     print_color(question[3], 'random')

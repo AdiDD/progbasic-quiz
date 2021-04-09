@@ -1,6 +1,6 @@
 import sys
 from util import clear_terminal
-from view import start_screen, get_answer
+from view import start_screen, get_answer, print_color
 from custom_quiz import custom_quiz
 from basic_quiz import basic_quiz
 from all_questions import all_questions
