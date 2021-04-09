@@ -7,6 +7,7 @@ from all_questions import all_questions
 
 
 def main():
+    clear_terminal()
     try:
         start_screen()
         answer = get_answer("Make your choice: ")
@@ -17,9 +18,9 @@ def main():
         elif answer == "3":
             all_questions()
         else:
-            minutes = get_answer("How many minutes would you like? (max 5) ")
-            while minutes not in ["1", "2", "3", "4", "5"]:
-                minutes = get_answer("Please enter a number between 1 and 5: ")
+            minutes = get_answer("How many minutes would you like? (max 25) ")
+            while minutes not in [str(x) for x in range(26)]:
+                minutes = get_answer("Please enter a time limit, up to 25 minutes: ")
             custom_quiz(int(minutes))
     except KeyboardInterrupt:
         clear_terminal()

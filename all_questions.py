@@ -15,15 +15,15 @@ def all_questions():
                 answer = view.get_answer("Pleas enter A, B, C or D: ").upper()
 
             if is_correct(answer, question):
-                print("That is correct")
+                print_color("That is correct")
                 _ = input("Press Enter to continue... ")
             else:
-                print("That is not correct")
-                print(f'The correct answer was {question[-1]}')
+                print_color("That is not correct")
+                print_color(f'The correct answer was {question[-1]}')
                 _ = input("Press Enter to continue... ")
     except KeyboardInterrupt:
         clear_terminal()
         sys.exit("Program closed")
 
     clear_terminal()
-    print("Congratulations, you finished all the questions!")
+    print_color("Congratulations, you finished all the questions!")
